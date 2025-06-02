@@ -43,6 +43,7 @@ header button{
     border: none;
     background: none;
     width: fit-content;
+    cursor: pointer;
 }
 
 header nav.mobile {
@@ -79,6 +80,10 @@ header .mobile a {
     color: var(--dark-blue);
     font-size: 1.125rem;
     line-height: 1.5rem;
+}
+
+header .desktop {
+    display : none;
 }
 
 main {
@@ -160,7 +165,9 @@ main {
 .terceira-secao img {
     max-width: 6.25rem;
 }
- 
+ .terceira-secao a {
+    text-decoration: none;
+ }
 .terceira-secao strong {
     color: var(--silver);
     font-size: 2rem;
@@ -189,7 +196,8 @@ main {
     }
     .primeira-secao {
         grid-column: 1 / 3;
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
         gap: 1.75rem;
     }
     .primeira-secao picture {
@@ -199,13 +207,26 @@ main {
         margin: 0;
     }
     .primeira-secao h1 {
-        font size: 3.5rem;
+        font-size: 3.5rem;
+    }
+    .primeira-secao button:hover {
+        background-color: var(--dark-blue);
+        cursor: pointer;
     }
     .segunda-secao h2 {
         font-size: 2.5rem;
     }
+    .terceira-secao {
+        display: flex;
+        grid-column: 1 / 4;
+    }
+
+    .terceira-secao h2:hover {
+        color: var(--vermillion);
+    }
     header > button {
         display : none;
+        grid-colum: 1 / 4;
     }
 
 
@@ -220,4 +241,8 @@ main {
         text-decoration: none;
         color: var(--gunmetal);
     }
+    header .desktop a:hover {
+        color: var(--vermillion);
+    }
+
 }
